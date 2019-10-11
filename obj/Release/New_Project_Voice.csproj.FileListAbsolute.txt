@@ -1,0 +1,10 @@
+G:\WinFormApp (Сентябрь)\New_Project_Voice\bin\Release\New_Project_Voice.exe.config
+G:\WinFormApp (Сентябрь)\New_Project_Voice\bin\Release\New_Project_Voice.exe
+G:\WinFormApp (Сентябрь)\New_Project_Voice\bin\Release\New_Project_Voice.pdb
+G:\WinFormApp (Сентябрь)\New_Project_Voice\obj\Release\New_Project_Voice.csprojAssemblyReference.cache
+G:\WinFormApp (Сентябрь)\New_Project_Voice\obj\Release\New_Project_Voice.Form1.resources
+G:\WinFormApp (Сентябрь)\New_Project_Voice\obj\Release\New_Project_Voice.Properties.Resources.resources
+G:\WinFormApp (Сентябрь)\New_Project_Voice\obj\Release\New_Project_Voice.csproj.GenerateResource.cache
+G:\WinFormApp (Сентябрь)\New_Project_Voice\obj\Release\New_Project_Voice.csproj.CoreCompileInputs.cache
+G:\WinFormApp (Сентябрь)\New_Project_Voice\obj\Release\New_Project_Voice.exe
+G:\WinFormApp (Сентябрь)\New_Project_Voice\obj\Release\New_Project_Voice.pdb
