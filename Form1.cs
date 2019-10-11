@@ -46,32 +46,41 @@ namespace New_Project_Voice
 
         void Btn_openfile_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFile = new OpenFileDialog
+            try
             {
-                Filter = "text files|*.txt"
-            };
-            openFile.ShowDialog();
-            string filename = openFile.FileName;
-            StreamReader stream = new StreamReader(filename);
-            textBox1.Text = stream.ReadToEnd();
-            stream.Close();
+                OpenFileDialog openFile = new OpenFileDialog
+                {
+                    Filter = "text files|*.txt"
+                };
+                openFile.ShowDialog();
+                string filename = openFile.FileName;
+                StreamReader stream = new StreamReader(filename);
+                textBox1.Text = stream.ReadToEnd();
+                stream.Close();
+            }
+            catch (Exception ex){ MessageBox.Show(ex.Message, ex.Source, MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         void Btn_Record_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFile = new SaveFileDialog
+            try
             {
-                Filter = "Wave Files| *.wav"
-            };
-            saveFile.ShowDialog();
-            string filename;
-            filename = saveFile.FileName;
-            speech = new SpeechSynthesizer();
-            speech.Rate = trackBar1.Value;
-            speech.SetOutputToWaveFile(filename);
-            speech.Speak(textBox1.Text);
-            speech.SetOutputToDefaultAudioDevice();
-            MessageBox.Show("Аудиофайл успешно сохранен!");
+
+                SaveFileDialog saveFile = new SaveFileDialog
+                {
+                    Filter = "Wave Files| *.wav"
+                };
+                saveFile.ShowDialog();
+                string filename;
+                filename = saveFile.FileName;
+                speech = new SpeechSynthesizer();
+                speech.Rate = trackBar1.Value;
+                speech.SetOutputToWaveFile(filename);
+                speech.Speak(textBox1.Text);
+                speech.SetOutputToDefaultAudioDevice();
+                MessageBox.Show("Аудиофайл успешно сохранен!");
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message, ex.Source, MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
     }
 }
